@@ -2,10 +2,7 @@ package com.example.advertisinganalizator.io.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,22 +10,22 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Builder
-@Table(name = "usersRequests")
+@Table(name = "users_requests")
 public class UsersRequest {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String epochTimestamp;
 
-    private String session_id;
+    private String sessionId;
 
     private String partner;
 
-    private String user_id;
+    private String userId;
 
-    private Float bid;
+    private Double bid;
 
     private Boolean isWin;
 }

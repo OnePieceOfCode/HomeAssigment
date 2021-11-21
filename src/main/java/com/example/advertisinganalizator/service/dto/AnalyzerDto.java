@@ -6,12 +6,13 @@ import lombok.Setter;
 
 @Setter
 @Getter
+@Builder
 public class AnalyzerDto {
 
-    private String user_id;
-    private String numRequests;
-    private String numImpressions;
-    private String numClicks;
+    private String userId;
+    private Long numRequests;
+    private Long numImpressions;
+    private Long numClicks;
     private String averagePrice;
 
 }
